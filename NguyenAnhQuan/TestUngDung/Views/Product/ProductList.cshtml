@@ -1,0 +1,35 @@
+﻿@model List<ModelEF.Model.Product>
+
+<div class="resp-tabs-container">
+    <div class="tab-1 resp-tab-content">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 top-product-grids tp2" style="height:480px;margin-top:10px;padding-bottom:30px;padding-top:10px;">
+                <a href="#">
+                    <div class="product-img">
+                        <div style="width:235px;height:291px;"><img src="@item.Image" alt="" style="height:auto;display: block; margin-left: auto; margin-right: auto;margin-top:auto;" /></div>
+                        <div class="p-mask">
+                            <form action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="w3ls1_item" value="Formal shirt" />
+                                <input type="hidden" name="amount" value="190.00" />
+                                <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </a>
+                <i class="fa fa-star yellow-star" aria-hidden="true"></i>
+                <i class="fa fa-star yellow-star" aria-hidden="true"></i>
+                <i class="fa fa-star yellow-star" aria-hidden="true"></i>
+                <i class="fa fa-star gray-star" aria-hidden="true"></i>
+                <i class="fa fa-star gray-star" aria-hidden="true"></i>
+                <h4>@item.Name</h4>
+                <h5>@item.UnitCost VND</h5>
+                <p style="margin-left:0;margin-top:5px;">Số lượng còn: @item.Quantity</p>
+            </div>
+        }
+
+        <div class="clearfix"></div>
+    </div>
+</div>

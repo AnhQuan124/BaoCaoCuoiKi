@@ -1,0 +1,19 @@
+﻿@model List<ModelEF.Model.Category>
+
+<ul class="dropdown-menu multi">
+    <div class="row">
+        <div class="col-sm-4">
+            <ul class="multi-column-dropdown">
+                @foreach (var item in Model)
+                {
+                <li><a href="women.html"><i class="fa fa-angle-right" aria-hidden="true"></i>@item.Name</a></li>
+                }
+
+            </ul>
+        </div>
+        <div class="col-sm-4 w3l">
+            <a href="women.html"><img src="/assets/client/images/menu1.jpg" class="img-responsive" alt=""></a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</ul>

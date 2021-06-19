@@ -1,0 +1,23 @@
+﻿@model List<ModelEF.Model.Category>
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="top-products">
+    <div class="container">
+        <h3>Top Products</h3>
+        <div class="sap_tabs">
+            <div id="horizontalTab">
+                <ul style="margin-left:200px;">
+                    @foreach (var item in Model)
+                    {
+                        <li class="resp-tab-item"><span>@item.Name</span></li>
+                    }
+                </ul>
+                <div class="clearfix"> </div>
+                @{ Html.RenderAction("ProductList", "Product"); }
+            </div>
+        </div>
+    </div>
+</div>
